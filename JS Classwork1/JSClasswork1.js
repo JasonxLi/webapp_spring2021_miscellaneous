@@ -24,16 +24,16 @@ function findUnique(inputStr) {
     result = [];
 
     for (let i = 0; i < inputStr.length; i++) {
-        if (inputStr[i] in freq){
+        if (inputStr[i] in freq) {
             freq[inputStr[i]]++;
         }
-        else{
+        else {
             freq[inputStr[i]] = 1;
         }
     }
 
-    Object.keys(freq).forEach(function(key) {
-        if(freq[key] == 1){
+    Object.keys(freq).forEach(function (key) {
+        if (freq[key] == 1) {
             result.push(key);
         }
     });
@@ -41,14 +41,14 @@ function findUnique(inputStr) {
     return result;
 }
 
-function doOperation(a, b, operator){
+function doOperation(a, b, operator) {
     return operator(a, b);
 }
 
-function multiply(a, b){
-    return a*b;
+function multiply(a, b) {
+    return a * b;
 }
 
-function power(a,b){
-    return a**b;
+function power(a, b) {
+    return a ** b;
 }
