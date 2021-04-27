@@ -1,0 +1,19 @@
+<div class="data-form">
+    <form action="<%= `/users/${user._id}/update?_method=PUT` %>" method="POST">
+        <label for="txtFirst">First Name</label>
+        <input type="text" name="first" id="txtFirst" required value="<%= user.name.first %>">
+
+        <label for="txtLast">Last Name</label>
+        <input type="text" name="last" id="txtLast" required value="<%= user.name.last %>">
+
+        <label for="txtPassword">Password</label>
+        <input type="text" name="password" id="txtPassword" required value="<%= user.password %>">
+
+        <label for="txtEmail">Email Address</label>
+        <input type="email" name="email" id="txtEmail" required value="<%= user.email %>">
+
+        <label for="txtZipCode">Zip Code</label>
+        <input type="text" name="zipCode" id="txtZipCode" required value="<%= user.zipCode %>"> 
+        <button type="submit">Save</button>
+    </form>
+</div>
